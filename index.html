@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acrylic Innovations | Under Construction</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #18212f;
+        --muted: #607084;
+        --line: #d9e2ec;
+        --surface: #f7fafc;
+        --accent: #00a7a7;
+        --accent-strong: #087f8c;
+        --warm: #f6b73c;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 18% 20%, rgba(0, 167, 167, 0.15), transparent 28rem),
+          radial-gradient(circle at 88% 74%, rgba(246, 183, 60, 0.18), transparent 30rem),
+          linear-gradient(135deg, #ffffff 0%, var(--surface) 58%, #eef6f8 100%);
+      }
+
+      main {
+        display: grid;
+        min-height: 100vh;
+        place-items: center;
+        padding: 32px;
+      }
+
+      .panel {
+        width: min(760px, 100%);
+        padding: clamp(28px, 6vw, 64px);
+        border: 1px solid rgba(217, 226, 236, 0.9);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.82);
+        box-shadow: 0 24px 70px rgba(24, 33, 47, 0.12);
+        backdrop-filter: blur(18px);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 22px;
+        color: var(--accent-strong);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--warm);
+        content: "";
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 10ch;
+        font-size: clamp(3rem, 11vw, 6.6rem);
+        line-height: 0.92;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 28px 0 0;
+        max-width: 58ch;
+        color: var(--muted);
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        line-height: 1.7;
+      }
+
+      .details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 34px;
+      }
+
+      .details span {
+        display: inline-flex;
+        align-items: center;
+        min-height: 42px;
+        padding: 10px 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #ffffff;
+        color: var(--ink);
+        font-size: 0.95rem;
+        font-weight: 700;
+      }
+
+      .bar {
+        overflow: hidden;
+        height: 8px;
+        margin-top: 40px;
+        border-radius: 999px;
+        background: #dfe9ef;
+      }
+
+      .bar::before {
+        display: block;
+        width: 46%;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--accent), var(--warm));
+        content: "";
+      }
+
+      @media (max-width: 520px) {
+        main {
+          padding: 18px;
+        }
+
+        .panel {
+          padding: 28px;
+        }
+
+        .details {
+          display: grid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="panel" aria-label="Under construction notice">
+        <div class="eyebrow">Acrylic Innovations</div>
+        <h1>Under Construction</h1>
+        <p>
+          Our new website is taking shape. We are preparing a polished home for
+          custom acrylic displays, signage, fabrication, and design work.
+        </p>
+        <div class="details" aria-label="Coming soon details">
+          <span>Custom Acrylic</span>
+          <span>Fabrication</span>
+          <span>Design Studio</span>
+        </div>
+        <div class="bar" aria-hidden="true"></div>
+      </section>
+    </main>
+  </body>
+</html>
